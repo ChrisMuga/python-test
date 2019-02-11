@@ -1,11 +1,21 @@
-states = ["Abia", "Adamawa", "Anambra", "Akwa Ibom", "Bauchi", 
-"Bayelsa", "Benue", "Borno", "Cross River", "Delta", 
-"Ebonyi", "Enugu", "Edo", "Ekiti", "Gombe", "Imo", 
-"Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", 
-"Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", 
-"Osun", "Oyo", "Plateau", 
-"Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
+ 
 
+data_set = [
+              'SUVOJITSU',
+              '651SUVOMN',
+              '$$$$$SUVOSUVOJIT$$$$$',
+            ]
 
-states.sort(key = lambda s: len(s))
-print(states[4])
+test_cases = [
+              'SUVO',
+              'SUVOJIT'
+              ]
+
+for i,d in enumerate(data_set):
+
+ for x,t in enumerate(test_cases):
+    count = d.count(t)
+    if(count >0):
+        print(f'{t}\t in \t {d} \t\t = \t{count}')
+    else:
+        print(f'{t}\t in \t {d} \t\t = \t0')
